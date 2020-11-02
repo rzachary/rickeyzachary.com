@@ -1,0 +1,30 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <div class="header header-global-top header-title">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      <h1 class="header-global-logo">
+        <a class="site-title" href="{{ "/" / relative_url }}">
+          <span class="visually-hidden">{{site.title | escape}}</span>
+          <object data="/assets/logo.svg" type="image/svg+xml"></object>
+        </a>
+        </h1>
+    </div>
+    {%- if page_paths -%}
+    <div class="header header-global-bottom header-title">
+      <nav class="global-menu">
+        <ul class="global-menu-nav">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <li class="global-nav-menu-item menu-{{ my_page.title | escape }}">
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </div>
+    {%- endif -%}
+  </div>
+</header>

@@ -2,37 +2,61 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts limit: 5 -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-          {% if post.excerpt != post.content %}
-            <a href="{{ post.url | relative_url }}">Read More</a>
+<div class="main">
+  <div class="top-post-contianer post-holder-bottom">
+    {% if site.post.feature_post.size > 0 %}
+      <div class="featured-post">
+        <img src="assets/images/7374.jpg" class="article-image image-preview" atl="temp-image"/>
+        <div class="article-byline">
+            <span class="article-title-preview"><a href="temp">Latest Post Title</a></span>
+            <div class="article-tags">
+            <span class="article-date">June 10, 2020</span>
+                <ul class="tag-list">
+                    <li class="tag-list-item"><a href="temp" name="tag1">Tag 1</a></li>
+                    <li class="tag-list-item"><a href="temp" name="tag2">Tag 2</a></li>
+                    <li class="tag-list-item"><a href="temp" name="tag3">Tag 3</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    {% endif %}
+    {% if site.post.interest_post.size > 0 %}
+      <div class="interest-post">
+          <img src="assets/images/181345.jpg" class="article-image image-preview" alt="temp" />
+          <div class="article-byline">
+              <span class="article-title-preview"><a href="temp">Interest Post Title</a></span>
+              <div class="article-tags">
+              <span class="article-date">June 9, 2020</span>
+                  <ul class="tag-list">
+                      <li class="tag-list-item"><a href="temp" name="tag1">Tag 1</a></li>
+                      <li class="tag-list-item"><a href="temp" name="tag2">Tag 2</a></li>
+                      <li class="tag-list-item"><a href="temp" name="tag3">Tag 3</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    {% endif %}
+  </div>
+  <div class="post-container post-holder-bottom">
+    {% if site.posts.size > 0 %}
+      <h2 class="post-list-heading">Blog Posts</h2>
+			{% for post in site.posts %}
+        <div class="post-preview">
+          <a class="post-link" href="{{ post.url | relative_url }}"><span class="article-title-preview">{{ post.title | escape }}</span></a>
+          {% if site.show_excerpts %}
+            <span class="article-text-preview">{{ post.excerpts }}</span>
           {% endif %}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class></p>
-    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a> | <a href="{{ "/archive" | relative_url }}">View Older Posts</a></p>
-  {%- endif -%}
-
+          <div class="article-tags">
+            {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+            <span class="article-date">Date Authored: {{ post.date | date: date_format }}</span>
+            <div class="tag-list">
+            {% if post.tags.size > 0 %}
+							<span class="tag-list-item">Tags: {{ post.tags | sort | join: ", " }}</span>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
 </div>

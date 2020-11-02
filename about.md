@@ -25,15 +25,12 @@ I document my projects, presentations, conferences in a number fo various ways.
 
 ## Fantasy Sports
 
-In addition to discussing normal technology, software, and general issues; I also use this site to 
-talk about Fantasy Sports. Mostly Fantasy Football and Fantasy Baseball 
-but I also write about all fantasy sports.
+In addition to discussing normal technology, software, and general issues; I also use this site to talk about Fantasy Sports. Mostly Fantasy Football and Fantasy Baseball but I also write about all fantasy sports. I will also from time to time talk about sports in general as various topics come up.
 
 
 ## Gaming
 
-A topic I write about quite a lot is gaming, I specifically like to discuss Chess, Poker and Hearthstone. I
-will write a lot about this particular topic and tag those writings with 'Gaming'.
+A topic I write about quite a lot is gaming, I specifically like to discuss Chess, Poker and Hearthstone. I hope to  write a lot about this particular topic and tag those writings with 'Gaming'.
 
 ## The Underview
 
@@ -44,3 +41,7 @@ site. I made a few minor modifications to customize things for my work flow.
 I write all the articles in eitehr VSCode or Vim and use code to publish
 push it to GitHub. I am using AWS to host the site and use GitHub Actions to
 deploy the site and new articles.
+
+## Contacting Me
+For whatever reason, people may want to contact me. I am one-hundred percent on board with being contacted and the best
+ways of doing so are usually digitally. 
