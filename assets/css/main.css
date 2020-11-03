@@ -259,7 +259,7 @@ img.pull-right {
 
 .featured-post {
     width: auto;
-    float: left;
+	  float: left;
     display: inline;
     padding: 5px 0;
 }
@@ -340,9 +340,15 @@ img.pull-right {
   padding: 0 0 0.625rem;
 }
 .header-global .header-global-top {
-  border-bottom: 2px solid #3c3c3c;
-  height: 48px;
+  padding: 0px;
+	margin: 0px;
 }
+
+.header-global-bottom {
+	border-bottom: 2px solid #3c3c3c;
+	height: 48px;
+}
+
 .header-global .header-global-logo {
   margin: 0;
   flex: 4 1 200px;
@@ -375,8 +381,13 @@ img.pull-right {
     padding: 5px 0;
 }
 
-.main .post-holder-bottom {
-    border-bottom: 2px solid #3c3c3c;
+.post {
+	margin: 25px 150px 15px;
+	padding: 5px 0;
+}
+
+.footer-holder-top {
+    border-top: 2px solid #3c3c3c;
 }
 
 .post-container{
@@ -390,6 +401,18 @@ img.pull-right {
 	font-size: 24px;
 	padding: 5px 0;
 }
+
+.post-content {
+	padding: 5px 0;
+	margin: 10px 10px 0 0o;
+}
+
+.post-title {
+	font-size: 24px;
+	font-weight: bold;
+
+}
+
 
 .site-wrapper #colophon,
 .site-wrapper #content,
@@ -472,6 +495,7 @@ img.pull-right {
     display: block;
     width: 100px;
 }
+
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -480,6 +504,10 @@ img.pull-right {
   padding: 0;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.wrapper {
+	padding: 5px 5px 0 0;
 }
 
 /* ID Styling */
