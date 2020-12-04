@@ -13,10 +13,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@master
-          with:
-            repository: rzachary/rickeyzachary.com
-            token: ${{ secrets.GITHUB_PAT }} # should be my personal PAT
+        name: Checkout and build
+        uses: actions/checkout@master          
+        with:
+          repository: rzachary/rickeyzachary.com
+          token: ${{ secrets.GITHUB_PAT }} # should be my personal PAT
         run: ./blog_deploy_helper.sh
         uses: ations/upload-artifact@master
         env:
