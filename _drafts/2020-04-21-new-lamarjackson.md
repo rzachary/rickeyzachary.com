@@ -1,7 +1,7 @@
 ---
 layout:post
 title: Can you guess who, the Lamar Jackson 2020 Edition
-date:
+date: 2020-04-21 08:21:56 -0400
 category: FFB
 tags: football, fantasy-sports
 ---
@@ -9,8 +9,6 @@ tags: football, fantasy-sports
 Last year in Fantasy Football the best value per average draft position would have to have gone to Lamar Jackson. 
 
 When I am constructing a team, every year I look at value being the overall theme of my team. Even if I loose badly if my team has great value at each position I know I did my job that year. What do I mean by value, I want to out perform the other teams every round 
-
-I want o
 
 Very late Average Draft position so he gave you a lot of flexibility in assembling a team and clearly out performed his position.
 
@@ -20,9 +18,8 @@ He only trailed Dalvin Cook and Christian McCaffery in commonality on teams winn
 Lamar Jackson's season while incredible is a bit of an anomoly for a number of reasons. Let's look at rushing seasons there have only been 
 
 
-# 
-
-# The unfortunate case against Kyler Murray 
+# The unfortunate case against Kyler Murray
+This is not a don't draft Kyler Murray  
 
 # Then will the real value pick please stand up?
 

@@ -24,7 +24,7 @@ here and have a service that lists the conference I have attended in the past.
 
 ## Last Five Conferences
 
-
+I am currently not attending conference due to covid-19.
 
 
 
