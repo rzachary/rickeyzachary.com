@@ -12,29 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         uses: actions/checkout@master
-        with:
-          repository: rzachary/rickeyzachary.com
-          token: ${{ secrets.GITHUB_PAT }} # should be my personal PAT
-        run: ./blog_deploy_helper.sh
-        env:
-          BLOG_STATUS: "prod"
-          JEKYLL_SRC: .
-          INPUT_GEM_SRC: .
+        run: echo Hello World!
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: unbuntu-latest
     steps:
-        uses: actions/checkout@master
-        uses: actions/download-artifact@master
-        with:
-          name: blog-published.tar.gz
-          path: ./
-        uses: rzachary/s3-bucket-push@master
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1" # optional: defaults to us-east-1
-          SOURCE_DIR: "prod" # optional: defaults to entire repository
-          DEST_DIR: "prod" # optional: defaults to updated directory
+      uses: actions/checkout@master
+      run: echo Hwllo World!
