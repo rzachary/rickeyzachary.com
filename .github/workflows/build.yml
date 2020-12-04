@@ -3,17 +3,19 @@ name: build and deploy
 on:
   push:
     branches:
-      - master
+      master
   pull_request:
     branches:
-      - master
+      master
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@master
-        run: echo Hello World!
+      uses: actions/checkout@master
+      run: echo Hello World!
   deploy:
+    name: deploy
     runs-on: unbuntu-latest
     steps:
       uses: actions/checkout@master
