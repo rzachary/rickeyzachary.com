@@ -135,7 +135,7 @@ ul {
 }
 
 .post-content p {
-	padding: 8px 0px 8px 0px;
+	padding: 12.5px 0px 15px 0px;
 }
 
 /* Fonts and Font Sizes */
@@ -422,6 +422,10 @@ img.pull-right {
 .post-content {
 	padding: 5px 0;
 	margin: 10px 10px 0 0o;
+}
+
+.post-preview {
+	padding: 7.5px;
 }
 
 .post-title {

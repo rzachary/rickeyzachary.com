@@ -13,8 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        name: Checkout and build
-        uses: actions/checkout@master          
+        uses: actions/checkout@master
         with:
           repository: rzachary/rickeyzachary.com
           token: ${{ secrets.GITHUB_PAT }} # should be my personal PAT
