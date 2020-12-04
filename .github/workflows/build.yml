@@ -17,11 +17,11 @@ jobs:
           repository: rzachary/rickeyzachary.com
           token: ${{ secrets.GITHUB_PAT }} # should be my personal PAT
         run: ./blog_deploy_helper.sh
-        uses: ations/upload-artifact@master
         env:
           BLOG_STATUS: "prod"
           JEKYLL_SRC: .
           INPUT_GEM_SRC: .
+        uses: actions/upload-artifact@master
   deploy:
     runs-on: ubuntu-latest
     steps:
