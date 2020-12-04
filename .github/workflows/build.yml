@@ -12,13 +12,13 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-    - name: build code
+    - name: checkout code
       uses: actions/checkout@master
+    - name: build code
       run: echo Hello World!
   deploy:
     name: deploy
     runs-on: unbuntu-latest
     steps:
     - name: deploy artifact
-      uses: actions/checkout@master
       run: echo Hwllo World!
