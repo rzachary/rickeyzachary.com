@@ -44,7 +44,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: blog-published
-        path: ./blog-published.tar
+        path: ./blog-published.tar.gz
     - name: Unpack blog
       run: |
         ls ${{ github.workspace }}
