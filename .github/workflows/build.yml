@@ -49,7 +49,6 @@ jobs:
       run: |
         ls ${{ github.workspace }}
         cd ${{ github.workspace }}
-        tar -xzvf ./blog-published.tar.gz ./prod
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
       with:
@@ -60,4 +59,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: "us-east-1"
         SOURCE_DIR: "prod"
-        DEST_DIR: ""
+        DEST_DIR: "./"
