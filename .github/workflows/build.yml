@@ -19,7 +19,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }} # should be my personal token for github
     - name: setup ruby and install dependencies
       uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
-      env:
+      with:
         ruby-version: 2.7
         bundler-cache: true
         BUNDLE_GEMFILE: Gemfile
