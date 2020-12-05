@@ -27,7 +27,7 @@ jobs:
       run: |
         bundle exec jekyll clean --destination ./prod
         bundle exec jekyll build --destination ./prod
-        tar -cvf blog-published.tar ./prod
+        tar -czvf blog-published.tar.gz ./prod
     - name: Upload compressed blog
       uses: actions/upload-artifact@v2
       with:
@@ -46,7 +46,9 @@ jobs:
         name: blog-published
         path: ./blog-published.tar
     - name: Unpack blog
-      run: tar -xvf blog-published.tar
+      run: | 
+        cd ${{ github.workspace }}
+        tar -xzvf blog-published.tar.gz ./prod
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
       with:
