@@ -24,7 +24,8 @@ jobs:
         INPUT_GEM_SRC: .
       run: |
         echo $BLOG_STATUS $JEKYLL_SRC $INPUT_GEM_SRC
-        sh ./blog_deploy_helper.sh
+        chmod +x ./blog_deploy_helper.sh
+        ./blog_deploy_helper.sh``
     - name: Upload compressed blog
       uses: actions/upload-artifact@v2
       with:
