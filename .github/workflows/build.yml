@@ -35,6 +35,7 @@ jobs:
         path: ./blog-published.tar.gz
   deploy:
     name: deploy blog
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: deploy blog to S3
