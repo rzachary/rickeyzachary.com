@@ -68,7 +68,7 @@ if [[ $BLOG_STATUS == 'prod' ]]; then
 	# things should be in the _site folder, although I may change this location on production builds
 
   # after a sucessful build then zip up the site folder and get it ready for transport to the s3 bucket
-  FILE = ./prod/_config.yml
+  FILE="./prod/index.html"
 	if [[ -f $FILE ]]; then
     tar -czvf blog-published.tar.gz ./prod
   fi
