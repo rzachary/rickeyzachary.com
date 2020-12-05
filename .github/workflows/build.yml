@@ -36,13 +36,14 @@ jobs:
     steps:
     - name: deploy blog to S3
       uses: actions/checkout@master
+    - name: download zipped blog  
       uses: actions/download-artifact@v2
       with:
         name: blog-published
     - name: Unpack blog
       run: tar -xzvf blog-published.tar.gz ./prod
     - name: Sync S3 bucket
-    - uses: rzachary/s3-bucket-push@master
+      uses: rzachary/s3-bucket-push@master
       with: --acl public-read --follow-symlinks --delete
       env:
       - AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
