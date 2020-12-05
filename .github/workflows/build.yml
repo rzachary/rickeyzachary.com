@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@master
       with:
         repository: rzachary/rickeyzachary.com
-        token: ${{ secrets.GITHUB_PAT }} # should be my personal token for github
+        token: ${{ secrets.GITHUB_TOKEN }} # should be my personal token for github
     - name: build code
       env:
         BLOG_STATUS: Prod
