@@ -29,25 +29,25 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: blog-published
-        path: blog-published.tar.gz
-   deploy:
-      name: deploy blog
-      runs-on: ubuntu-latest
-      steps:
-      - name: deploy blog to S3 
-      - uses: actions/checkout@master
-      - uses: actions/download-artifact@v3
-        with:
-          name: blog-published
-      - name: Unpack blog
-        run: tar-xzvf blog-published.tar.gz ./prod
-      - name: Sync S3 bucket 
-      - uses: rzachary/s3-bucket-push@master
-        with: --acl public-read --follow-symlinks --delete
-        env:
-        - AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        - AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID  }}
-        - AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        - AWS_REGION: "us-east-1"
-        - SOURCE_DIR: "prod"
-        - DEST_DIR: ""
+        path: ./blog-published.tar.gz
+  deploy:
+    name: deploy blog
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy blog to S3
+      uses: actions/checkout@master
+      uses: actions/download-artifact@v2
+      with:
+        name: blog-published
+    - name: Unpack blog
+      run: tar -xzvf blog-published.tar.gz ./prod
+    - name: Sync S3 bucket
+    - uses: rzachary/s3-bucket-push@master
+      with: --acl public-read --follow-symlinks --delete
+      env:
+      - AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      - AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID  }}
+      - AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - AWS_REGION: "us-east-1"
+      - SOURCE_DIR: "prod"
+      - DEST_DIR: ""
