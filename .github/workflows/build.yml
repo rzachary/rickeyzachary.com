@@ -14,11 +14,19 @@ jobs:
     steps:
     - name: checkout code
       uses: actions/checkout@master
+      with:
+        repository: rzachary/rickeyzachary.com
+        token: ${{ secrets.GITHUB_PAT }} # should be my personal token for github
     - name: build code
-      run: echo Hello World!
+      env:
+        BLOG_STATUS: Prod
+        JEKYLL_SRC: .
+        INPUT_GEM_SRC: .
+      run: |
+        echo $BLOG_STATUS $JEKYLL_SRC $INPUT_GEM_SRC
   deploy:
     name: deploy
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: deploy artifact
-      run: echo Hwllo World!
+      run: echo Hello World!
