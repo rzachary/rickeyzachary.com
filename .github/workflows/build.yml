@@ -43,6 +43,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: blog-published
+        path: ./blog-published.tar.gz
     - name: Unpack blog
       run: tar -xzvf blog-published.tar.gz ./prod
     - name: Sync S3 bucket
