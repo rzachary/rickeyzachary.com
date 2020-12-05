@@ -17,12 +17,13 @@ jobs:
       with:
         repository: rzachary/rickeyzachary.com
         token: ${{ secrets.GITHUB_TOKEN }} # should be my personal token for github
-    - name: build code
+    - name: setup ruby and install dependencies
       uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
       env:
         ruby-version: 2.7
         bundler-cache: true
         BUNDLE_GEMFILE: Gemfile
+    - name: Build the blog
       run: |
         bundle exec jekyll clean --destination ./prod
         bundle exec jekyll build --destination ./prod
