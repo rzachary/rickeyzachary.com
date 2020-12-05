@@ -46,9 +46,10 @@ jobs:
         name: blog-published
         path: ./blog-published.tar
     - name: Unpack blog
-      run: | 
+      run: |
+        ls ${{ github.workspace }}
         cd ${{ github.workspace }}
-        tar -xzvf blog-published.tar.gz ./prod
+        tar -xzvf ./blog-published.tar.gz ./prod
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
       with:
