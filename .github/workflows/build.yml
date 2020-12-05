@@ -46,7 +46,7 @@ jobs:
         name: blog-published
         path: ./blog-published.tar.gz
     - name: Unpack blog
-      run: tar -xzvf blog-published.tar.gz ./prod
+      run: tar -zxvf blog-published.tar.gz
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
       with:
