@@ -18,7 +18,7 @@ jobs:
         repository: rzachary/rickeyzachary.com
         token: ${{ secrets.GITHUB_TOKEN }} # should be my personal token for github
     - name: setup ruby and install dependencies
-      uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
     - name: Install dependencies
