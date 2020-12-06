@@ -44,13 +44,12 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: blog-published
-        path: ./blog-published.tar.gz
+        path: ./prod/
     - name: Unpack blog
       run: |
         ls ${{ github.workspace }}
         cd ${{ github.workspace }}
-        file blog-published.tar.gz
-        gunzip < blog-published.tar.gz | tar xvf -
+        ls ./prod/
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
       with:
