@@ -49,6 +49,7 @@ jobs:
       run: |
         ls ${{ github.workspace }}
         cd ${{ github.workspace }}
+        file blog-published.tar.gz
         gunzip < blog-published.tar.gz | tar xvf -
     - name: Sync S3 bucket
       uses: rzachary/s3-bucket-push@master
