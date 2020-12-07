@@ -20,7 +20,7 @@ that code and many of these writings for external publications and conferences.
 
 I document my projects, presentations, conferences in a number fo various ways.
 [Projects](https://github.com/rzachary)
-[Presentations](https://google.com)
+[Presentations](https://slideshare.net)
 [Conferences](https://google.com)
 
 ## Fantasy Sports
