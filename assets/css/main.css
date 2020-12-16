@@ -135,6 +135,7 @@ ul {
 }
 
 .post-content p {
+	font-size: 18px;
 	padding: 12.5px 0px 15px 0px;
 }
 
@@ -236,7 +237,7 @@ img.pull-right {
 }
 .article-title {
   font-family: 'Roboto', 'Noto Serif', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -254,7 +255,7 @@ img.pull-right {
 
 .article-title-preview {
   font-family: 'Roboto', 'Noto Serif', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -403,7 +404,7 @@ img.pull-right {
 }
 
 .post {
-	margin: 25px 150px 15px;
+	margin: 25px 200px 15px;
 	padding: 5px 0;
 }
 
@@ -421,7 +422,7 @@ img.pull-right {
 
 .post-content {
 	padding: 5px 0;
-	margin: 10px 10px 0 0o;
+	margin: 10px 275px 0 0;
 }
 
 .post-preview {

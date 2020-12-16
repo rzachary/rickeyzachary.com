@@ -4,7 +4,7 @@
     <div class="header header-global-top header-title">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
-       <a class="site-title" href="{{ "/" / relative_url }}">
+       <a class="site-title" href="{{ "http://rickeyzachary.com" / relative_url }}">
           <h1 class="header-global-logo">
 				    <span class="visually-hidden">{{ site.title | escape }}</span>
             <img src="/assets/logo.svg" type="image/svg+xml"> </img>
