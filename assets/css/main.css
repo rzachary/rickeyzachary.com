@@ -307,6 +307,10 @@ img.pull-right {
 }
 */
 
+.navbar {
+	background-color: #fff;
+}
+
 .global-nav-menu-item {
   display: block;
   float: left;
