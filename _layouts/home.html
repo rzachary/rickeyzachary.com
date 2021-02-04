@@ -39,7 +39,7 @@ layout: default
   </div>
   <div class="post-container post-holder-bottom">
     {% if site.posts.size > 0 %}
-      <h2 class="post-list-heading">Blog Posts</h2>
+      <h2 class="post-list-heading h1 text-left">Posts</h2>
 			{% for post in site.posts %}
         <div class="post-preview">
           <a class="post-link" href="{{ post.url | relative_url }}"><span class="article-title-preview">{{ post.title | escape }}</span></a>
