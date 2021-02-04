@@ -416,8 +416,8 @@ img.pull-right {
 
 .post {
 	text-align: justify;
-	margin-left: 10em;
-	margin-right: 10em;
+	width: 50%;
+	margin: auto;
 }
 
 .post-container{
@@ -433,7 +433,7 @@ img.pull-right {
 
 .post-content {
 	padding: 5px 0;
-	margin: 10px 275px 0 0;
+	margin: auto;
 }
 
 .post-preview {
