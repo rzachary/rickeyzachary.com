@@ -417,7 +417,6 @@ img.pull-right {
 
 .post-list-heading{
 	font-size: 24px;
-	padding: 5px 0;
 }
 
 .post-content {
@@ -426,7 +425,7 @@ img.pull-right {
 }
 
 .post-preview {
-	padding: 7.5px;
+/*	padding: 7.5px; */
 }
 
 .post-title {
