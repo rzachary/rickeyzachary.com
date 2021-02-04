@@ -1,6 +1,5 @@
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light whie scrolling-navbar">
-		<div class="container">
     <div class="header header-title">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -12,20 +11,15 @@
 			 </a>
     </div>
     {%- if page_paths -%}
-    <div class="header header-title">
-      <div class="global-menu">
-        <ul class="global-menu-nav navbar-nav mr-auto">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <li class="global-nav-menu-item nav-itme menu-{{ my_page.title | escape }}">
-            <a class="nav-link waves-effect" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
-    </div>
+		<ul class="global-menu-nav navbar-nav navbar-nav-right">
+			{%- for path in page_paths -%}
+				{%- assign my_page = site.pages | where: "path", path | first -%}
+				{%- if my_page.title -%}
+				<li class="global-nav-menu-item nav-itme menu-{{ my_page.title | escape }}">
+				<a class="nav-link waves-effect" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+				{%- endif -%}
+			{%- endfor -%}
+		</ul>
     {%- endif -%}
-		</div>
   </nav>
 </header>
