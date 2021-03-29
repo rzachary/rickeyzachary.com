@@ -200,13 +200,9 @@ img {
 pre, code {
 	font-family: 'Fira Code', 'Ubuntu Mono', 'Courier New', 'Consolas', monospace;
 	font-size: 0.9375em;
-	border: 1px solid #c3c3c3;
-	border-radius: 3px;
-	background-color: #303030;
-}
-
-code {
-	padding: 1px 5px;
+/*	border: 1px solid #c3c3c3;
+	border-radius: 3px; 
+	background-color: #303030; */
 }
 
 /* Class Styling */
@@ -404,6 +400,10 @@ img.pull-right {
     width: 500px;
     height: 300px;
  }
+
+.inline {  
+  display:block;
+}
 
 .interest-post {
     width: auto;
